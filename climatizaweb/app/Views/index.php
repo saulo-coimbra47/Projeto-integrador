@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/1ab94d0eba.js" crossorigin="anonymous"></script>
     <title></title>
-    <link rel="stylesheet" href="css/main.css">
+    <link type=text/css rel="stylesheet" href="../public/css/main.css">
 </head>
 <body>
     <main class="container">
