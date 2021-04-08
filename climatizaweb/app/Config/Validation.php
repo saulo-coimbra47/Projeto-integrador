@@ -40,4 +40,46 @@ class Validation
 	//--------------------------------------------------------------------
 	// Rules
 	//--------------------------------------------------------------------
+	public $signup = [
+		'name' => [
+			'label' => 'Nome',
+			'rules'  => 'required',
+	
+		],
+		'email'    => [
+			'rules'  => 'required|valid_email|is_unique[users.email]',
+			'errors' => [
+				'valid_email' => 'Por favor, verifique o campo Email. inválido.'
+			]
+		],
+
+		'password'  => [
+
+			'label' => 'Senha',
+			'rules' => 'required|min_length[8]|max_length[30]',
+
+		],
+
+		
+		'confirm'  => [
+
+			'label' => 'Confirmar Senha',
+			'rules' => 'required|min_length[8]|max_length[30]|matches[password]',
+
+		]
+	];
+
+	public $login =
+	[
+		'email' =>
+		[
+			'label' => 'E-mail',
+			'rules' => 'required|valid_email|is_not_unique[users.email]',
+		],
+		'senha' =>
+		[
+			'label' => 'Senha',
+			'rules' => 'required|min_length[8]|max_length[30]',
+		],
+	];
 }
