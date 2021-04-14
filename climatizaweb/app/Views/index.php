@@ -1,47 +1,55 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/1ab94d0eba.js" crossorigin="anonymous"></script>
-    <title></title>
-    <link type=text/css rel="stylesheet" href="../public/css/main.css">
-</head>
-<body>
-    <main class="container">
-        <h2>Login</h2>
-        <form action="">
-            <div class="input-field">
-                <input type="text" name="username" id="username"
-                    placeholder="E-mail">
-                <div class="underline"></div>
-            </div>
-            <div class="input-field">
-                <input type="password" name="password" id="password"
-                    placeholder="Senha">
-                <div class="underline"></div>
-            </div>
+<?php echo $this->include('header.php'); ?>
 
-            <input type="submit" value="Entrar">
-        </form>
+<div class="container">
 
-        <div class="footer">
-            <span>Conecte-se com uma rede social</span>
-            <div class="social-fields">
-                <div class="social-field google">
-                    <a href="#">
-                        <i class="fab fa-google-plus-g"></i>
-                        Conectar-se com Google+
-                    </a>
-                </div>
-                <div class="social-field facebook">
-                    <a href="#">
-                        <i class="fab fa-facebook-f"></i>
-                        Conectar-se com Facebook
-                    </a>
-                </div>
-            </div>
+    <div class="card" style="border-radius: 20px; margin-left: 15vw; margin-right: 15vw;">
+        <div class="card-header" style="text-align: center; background-color: rgb(207, 194, 149); border-radius: 20px 20px 0px 0px;">
+            <h1>Tempo agora em {Cidade}</h1>
         </div>
-    </main>
-</body>
-</html>
+        <div class="card-body" style="text-align: center; background-color: rgb(255, 255, 255);">
+            <h1 class="card-title">20°</h1>
+            <br>
+            <h5 class="card-text">Nublado</h5>
+            <br>
+            <h5 class="card-text">Noite</h5>
+
+            <img class="img-fluid" src="img/nubladonoite.png" alt="" width="150vw" height="150vh">
+
+
+
+
+            <div class="row align-items-center">
+
+                <div class="col">
+                    <h5>Vento:</h5>
+                </div>
+
+                <div class="col">
+                    <h5>20 km/h</h5>
+                </div>
+
+            </div>
+
+            <div class="row align-items-center">
+
+                <div class="col">
+                    <h5>Umidade:</h5>
+                </div>
+
+                <div class="col">
+                    <h5>85%</h5>
+                </div>
+
+            </div>
+            <br>
+
+        </div>
+        <div class="card-footer" style="text-align: center; background-color: rgb(122, 187, 187); border-radius: 0px 0px 20px 20px;">
+            <button type="button" class="btn btn-info">Mais informações</button>
+        </div>
+    </div>
+
+
+</div>
+
+<?php echo $this->include('footer.php'); ?>
