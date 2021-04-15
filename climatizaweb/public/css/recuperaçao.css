@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -9,20 +9,11 @@
 }
 
 body {
-=======
-@import url(./bootstrap.min.css);
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
-
-body,
-html{
-    font-family: "Poppins", sans-serif;
->>>>>>> 196ed841f4143170ccfe1405e884294bcaa48a8b
     background: linear-gradient(to right,#1e87e8 , white);
     background-repeat: no-repeat;
     min-height: 100vh;
     min-width: 100vw;
     display: flex;
-<<<<<<< HEAD
     align-items: center;
     justify-content: center;
 }
@@ -37,21 +28,11 @@ main.container {
 }
 
 main h2 {
-    font-weight: 600;
-    margin-bottom: 2rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
     position: relative;
     
-}
-
-main h2::before {
-    content: '';
-    position: absolute;
-    height: 4px;
-    width: 25px;
-    bottom: 3px;
-    left: 0;
-    border-radius: 8px;
-    background: linear-gradient(to right,#1e87e8 , white);
+    
 }
 
 form {
@@ -59,8 +40,15 @@ form {
     flex-direction: column;
 }
 
+main span {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.8rem;
+    
+}
+
 .input-field {
     position: relative;
+    margin-top: 0.5rem;
 }
 
 form .input-field:first-child {
@@ -106,7 +94,7 @@ form .input-field:first-child {
 }
 
 form input[type="submit"] {
-    margin-top: 2rem;
+    margin-top: 0.1rem;
     padding: 0.4rem;
     width: 100%;
     background: linear-gradient(to left,#1e87e8 , rgb(0, 60, 109));
@@ -129,87 +117,18 @@ form input[type="submit"]:hover {
     margin-top: 1rem;
 }
 
-.footer span {
+.footer a {
     color: rgba(0, 0, 0, 0.7);
-    font-size: 0.8rem;
+    position: relative;
     text-align: center;
-}
-
-.footer .social-field {
-    padding: 0.4rem;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    width: 100%;
-    cursor: pointer;
-    margin-top: 1rem;
-}
-
-.footer .social-field a i {
-    margin: 0 0.5rem;
-    width: 15px;
-}
-
-.footer .social-field a {
+    font-size: 1.0rem;
     text-decoration: none;
-    color: white;
-}
-
-.footer .social-field.google {
-    background: linear-gradient(to right, #d11717, #ff3232);
-}
-
-.footer .social-field.facebook {
-    background: linear-gradient(to right, #1e3c72, #2a5298);
-}
-=======
-    justify-content: center;
-    align-items: center;
-}
-
-.form-control{
-
-    border-radius: 50px;
-    background-color: #1e87e8;
    
 }
 
-.form-inline{
-    border-color: none;
-}
-
-.img-fluid:hover{
+.footer a:hover{
     opacity: 0.9;
 }
-::placeholder {
-    color: white;
-    font-size: 13px;
-}
-
-.login-btn{
-    background-color: white;
-    font-size: 20px;
-    border-radius: 15px;
-    border-color: #1e87e8;
-    outline: none;
-    cursor: pointer;
-}
-
-.login-btn:hover{
-    border-color: rgb(132, 132, 133);
-    outline: none;
-}
-
-.lgnbtn{
-    color: #1e87e8;
-
-}
-
-.txtbtn-lgn{
-    color: #1e87e8;
-    font-family: roboto;
-    font-size: 17px;
-    text-decoration: none;
-}
 
 
->>>>>>> 196ed841f4143170ccfe1405e884294bcaa48a8b
+
