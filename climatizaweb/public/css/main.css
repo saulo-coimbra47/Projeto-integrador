@@ -1,5 +1,8 @@
-<<<<<<< HEAD
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
+/*
+    PADRAO TODAS AS PAGINAS
+*/
 * {
     margin: 0;
     border: 0;
@@ -9,20 +12,11 @@
 }
 
 body {
-=======
-@import url(./bootstrap.min.css);
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
-
-body,
-html{
-    font-family: "Poppins", sans-serif;
->>>>>>> 196ed841f4143170ccfe1405e884294bcaa48a8b
     background: linear-gradient(to right,#1e87e8 , white);
     background-repeat: no-repeat;
     min-height: 100vh;
     min-width: 100vw;
     display: flex;
-<<<<<<< HEAD
     align-items: center;
     justify-content: center;
 }
@@ -36,14 +30,22 @@ main.container {
     border-radius: 8px;
 }
 
-main h2 {
+/*
+    FIM PADRAO TODAS AS PAGINAS
+*/
+
+/*
+    LOGIN INICIO
+*/
+
+#h2-lgn {
     font-weight: 600;
     margin-bottom: 2rem;
     position: relative;
     
 }
 
-main h2::before {
+#h2-lgn::before {
     content: '';
     position: absolute;
     height: 4px;
@@ -54,20 +56,20 @@ main h2::before {
     background: linear-gradient(to right,#1e87e8 , white);
 }
 
-form {
+#form-lgn {
     display: flex;
     flex-direction: column;
 }
 
-.input-field {
+#input-field-lgn{
     position: relative;
 }
 
-form .input-field:first-child {
+#input-field-lgn:first-child {
     margin-bottom: 1.5rem;
 }
 
-.input-field .underline::before {
+#input-field-lgn .underline::before {
     content: '';
     position: absolute;
     height: 1px;
@@ -77,7 +79,7 @@ form .input-field:first-child {
     background: rgba(0, 0, 0, 0.2);
 }
 
-.input-field .underline::after {
+#input-field-lgn .underline::after {
     content: '';
     position: absolute;
     height: 1px;
@@ -90,22 +92,22 @@ form .input-field:first-child {
     transform-origin: left;
 }
 
-.input-field input:focus ~ .underline::after {
+#input-field-lgn input:focus ~ .underline::after {
     transform: scaleX(1);
 }
 
-.input-field input {
+#input-field-lgn input {
     outline: none;
     font-size: 0.9rem;
     color: rgba(0, 0, 0, 0.7);
     width: 100%;
 }
 
-.input-field input::placeholder {
+#input-field-lgn input::placeholder {
     color: rgba(0, 0, 0, 0.5);
 }
 
-form input[type="submit"] {
+#form-lgn input[type="submit"] {
     margin-top: 2rem;
     padding: 0.4rem;
     width: 100%;
@@ -118,24 +120,39 @@ form input[type="submit"] {
     transition: all 0.3s ease;
 }
 
-form input[type="submit"]:hover {
+#form-lgn input[type="submit"]:hover {
     letter-spacing: 0.5px;
     background: linear-gradient(to right,#1e87e8 , rgb(0, 60, 109));
 }
 
-.footer {
+#footer-lgn {
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
 }
 
-.footer span {
+#footer-lgn a {
+    color: rgba(0, 0, 0, 0.7);
+    padding: 0.9rem;
+    font-size: 1.0rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+#footer-lgn a:hover{
+    opacity: 0.9;
+}
+
+
+#footer-lgn span {
     color: rgba(0, 0, 0, 0.7);
     font-size: 0.8rem;
     text-align: center;
 }
 
-.footer .social-field {
+
+
+#footer-lgn .social-field {
     padding: 0.4rem;
     border-radius: 4px;
     font-size: 0.85rem;
@@ -144,72 +161,342 @@ form input[type="submit"]:hover {
     margin-top: 1rem;
 }
 
-.footer .social-field a i {
+#footer-lgn .social-field a i {
     margin: 0 0.5rem;
     width: 15px;
 }
 
-.footer .social-field a {
+#footer-lgn .social-field a {
     text-decoration: none;
     color: white;
 }
 
-.footer .social-field.google {
+#footer-lgn .social-field.google {
     background: linear-gradient(to right, #d11717, #ff3232);
 }
 
-.footer .social-field.facebook {
+#footer-lgn .social-field.facebook {
     background: linear-gradient(to right, #1e3c72, #2a5298);
 }
-=======
-    justify-content: center;
-    align-items: center;
+
+
+/*
+    FIM LOGIN
+*/
+
+
+/*
+    CADASTRO INICIO
+*/
+
+#h2-cad {
+    font-weight: 600;
+    margin-bottom: 2rem;
+    position: relative;
+    
 }
 
-.form-control{
+#h2-cad::before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 45px;
+    bottom: 3px;
+    left: 0;
+    border-radius: 8px;
+    background: linear-gradient(to right,#1e87e8 , white);
+}
 
-    border-radius: 50px;
-    background-color: #1e87e8;
+#form-cad {
+    display: flex;
+    flex-direction: column;
+}
+
+#input-field-cad {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+#input-field-cad .underline::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#input-field-cad .underline::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(to right,#1e87e8 , white);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+
+
+#input-field-cad input:focus ~ .underline::after {
+    transform: scaleX(1);
+}
+
+#input-field-cad input {
+    outline: none;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+}
+
+#input-field-cad input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#form-cad input[type="submit"] {
+    margin-top: 1.0rem;
+    padding: 0.4rem;
+    width: 100%;
+    background: linear-gradient(to left,#1e87e8 , rgb(0, 60, 109));
+    cursor: pointer;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+#form-cad input[type="submit"]:hover {
+    letter-spacing: 0.5px;
+    background: linear-gradient(to right,#1e87e8 , rgb(0, 60, 109));
+}
+
+#form-cad a {
+    color: rgba(0, 0, 0, 0.7);
+    padding: 0.9rem;
+    font-size: 1.0rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+#form-cad a:hover{
+    opacity: 0.9;
+}
+
+
+/*
+    FIM CADASTRO
+*/
+/* 
+    RECUPERAÇÃO INICIO
+*/
+
+#h2-rec {
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+    position: relative;
+    
+    
+}
+
+#form-rec {
+    display: flex;
+    flex-direction: column;
+}
+
+#span-rec {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.8rem;
+    
+}
+
+#input-field-rec {
+    position: relative;
+    margin-top: 0.5rem;
+}
+
+#input-field-rec:first-child {
+    margin-bottom: 1.5rem;
+}
+
+#input-field-rec .underline::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#input-field-rec .underline::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(to right,#1e87e8 , white);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+#input-field-rec input:focus ~ .underline::after {
+    transform: scaleX(1);
+}
+
+#input-field-rec input {
+    outline: none;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+}
+
+#input-field-rec input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#form-rec input[type="submit"] {
+    margin-top: 0.1rem;
+    padding: 0.4rem;
+    width: 100%;
+    background: linear-gradient(to left,#1e87e8 , rgb(0, 60, 109));
+    cursor: pointer;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+#form-rec input[type="submit"]:hover {
+    letter-spacing: 0.5px;
+    background: linear-gradient(to right,#1e87e8 , rgb(0, 60, 109));
+}
+
+#footer-rec {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+#footer-rec a {
+    color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    text-align: center;
+    font-size: 1.0rem;
+    text-decoration: none;
    
 }
 
-.form-inline{
-    border-color: none;
-}
-
-.img-fluid:hover{
+#footer-rec a:hover{
     opacity: 0.9;
 }
-::placeholder {
-    color: white;
-    font-size: 13px;
+
+
+
+/* 
+    FIM RECUPERAÇÃO
+*/
+
+
+/*
+    REDEFINIR INICIO
+*/
+
+
+#h2-red {
+    font-weight: 300;
+    
+    position: relative;
+    text-align: center;
+    
 }
 
-.login-btn{
-    background-color: white;
-    font-size: 20px;
-    border-radius: 15px;
-    border-color: #1e87e8;
+
+#span-red {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.8rem;
+    
+    
+}
+
+#form-red {
+    display: flex;
+    flex-direction: column;
+}
+
+#input-field-red {
+    position: relative;
+    margin-top: 0.3rem;
+
+}
+
+#input-field-red:first-child {
+    margin-bottom: 1.5rem;
+}
+
+#input-field-red .underline::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+#input-field-red .underline::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(to right,#1e87e8 , white);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+#input-field-red input:focus ~ .underline::after {
+    transform: scaleX(1);
+}
+
+#input-field-red input {
     outline: none;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+}
+
+#input-field-red input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#form-red input[type="submit"] {
+    margin-top: 2rem;
+    padding: 0.4rem;
+    width: 100%;
+    background: linear-gradient(to left,#1e87e8 , rgb(0, 60, 109));
     cursor: pointer;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
-.login-btn:hover{
-    border-color: rgb(132, 132, 133);
-    outline: none;
+#form-red input[type="submit"]:hover {
+    letter-spacing: 0.5px;
+    background: linear-gradient(to right,#1e87e8 , rgb(0, 60, 109));
 }
 
-.lgnbtn{
-    color: #1e87e8;
+/*
+    FIM REDEFINIR
+*/
 
-}
-
-.txtbtn-lgn{
-    color: #1e87e8;
-    font-family: roboto;
-    font-size: 17px;
-    text-decoration: none;
-}
-
-
->>>>>>> 196ed841f4143170ccfe1405e884294bcaa48a8b
