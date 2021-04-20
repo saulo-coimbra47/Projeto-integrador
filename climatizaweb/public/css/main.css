@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
+
 /*
     PADRAO TODAS AS PAGINAS
 */
+html,
+body {
+  height: 100%;
+}
+
 * {
     margin: 0;
     border: 0;
@@ -12,13 +18,25 @@
 }
 
 body {
-    background: linear-gradient(to right,#1e87e8 , white);
+    /*background: linear-gradient(to right,#1e87e8 , white);*/
+    background-color: #d0d0d0;
     background-repeat: no-repeat;
     min-height: 100vh;
     min-width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.bg-blue{
+    background-color: #71a0c8;
+}
+
+code {
+    color: #665;
+    background: #fff;
+    padding: 0.2rem;
+    border-radius: 0.2rem;
 }
 
 main.container {
@@ -29,6 +47,8 @@ main.container {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
 }
+
+
 
 /*
     FIM PADRAO TODAS AS PAGINAS

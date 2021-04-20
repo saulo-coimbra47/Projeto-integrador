@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/1ab94d0eba.js" crossorigin="anonymous"></script>
-    <title></title>
-    <link rel="stylesheet" href="../public/css/main.css">
-</head>
-<body>
-    <main class="container">
+<?php echo $this->include('header.php'); ?>
+    <main class="container" style="width: 25vw;">
         <h2 id="h2-lgn">Login</h2>
         <form action="" id="form-lgn">
             <div class="input-field" id="input-field-lgn">
@@ -44,5 +35,6 @@
             <a  href="#">Não tem uma conta? Cadastre-se </a>
         </div>
     </main>
-</body>
-</html>
+
+
+<?php echo $this->include('footer.php'); ?>
