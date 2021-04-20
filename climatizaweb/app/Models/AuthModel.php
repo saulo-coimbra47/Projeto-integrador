@@ -35,7 +35,9 @@ class AuthModel extends Model
         return $user;
     }
 
-    public function RecoverPass(){
+    public function getuserId($email){
+
+        return $this->select('id')->where(['email' => $email])->get()->getRowArray();
         
     }
 }
