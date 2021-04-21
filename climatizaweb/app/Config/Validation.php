@@ -76,7 +76,7 @@ class Validation
 			'label' => 'E-mail',
 			'rules' => 'required|valid_email|is_not_unique[users.email]',
 		],
-		'senha' =>
+		'password' =>
 		[
 			'label' => 'Senha',
 			'rules' => 'required|min_length[8]|max_length[30]',

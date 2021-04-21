@@ -1,4 +1,4 @@
-<?php echo $this->include('header.php'); ?>
+<?php echo $this->include('UserHeader.php', array('titulo' => $titulo)); ?>
 <div class="container" style="margin-top: 4vh">
 
     <div class="card" style="margin-left: 15vw; margin-right: 15vw; border-radius: 8px;">
@@ -10,7 +10,7 @@
             <div class="row align-items-center">
                 <label class="col"><strong>Nome: </strong> </label>
                 <div class="col">
-                    <input type="text" readonly class="form-control-plaintext" value="Nome do usuário">
+                    <input type="text" readonly class="form-control-plaintext" value="<?php echo $UserName ?>">
                 </div>
 
                 <div class="col">
@@ -26,9 +26,10 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form method="post" id="formChangeName" action="#">
+                                    <?= form_open(base_url('altname'), ['id' => 'formChangeName']) ?>
+                                    
                                         <div class="input-field" id="input-field-cad">
-                                            <input type="text" name="name" id="name" placeholder="Nome">
+                                            <input type="text" name="name" id="name" placeholder="<?php echo $UserName ?>">
                                             <div class="underline"></div>
                                         </div>
 
@@ -36,7 +37,7 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Descartar</button>
                                     <button type="submit" class="btn btn-primary">Salvar</button>
-                                    </form>
+                                    <?= form_close() ?>
                                 </div>
                             </div>
                         </div>
@@ -50,7 +51,7 @@
             <div class="row align-items-center">
                 <label class="col"><strong>Local favorito: </strong> </label>
                 <div class="col">
-                    <input type="text" readonly class="form-control-plaintext" value="Local favorito atual">
+                    <input type="text" readonly class="form-control-plaintext" value="<?php if($UserPlace !== null){ echo $UserPlace; } else { echo "Local indefinido"; } ?>">
                 </div>
 
                 <div class="col">
@@ -65,7 +66,7 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form method="post" id="formChangePlace" action="#">
+                                <?= form_open(base_url('altplace'), ['id' => 'formChangePlace']) ?>
                                         <div class="input-field" id="input-field-cad">
                                             <input type="text" name="local" id="local" placeholder="Cidade-UF">
                                             <div class="underline"></div>
@@ -75,7 +76,7 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Descartar</button>
                                     <button type="submit" class="btn btn-primary">Salvar</button>
-                                    </form>
+                                    <?= form_close() ?>
                                 </div>
                             </div>
                         </div>
@@ -183,7 +184,8 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form method="post" id="formChangePassword" action="#">
+                            <?= form_open(base_url('altpassword'), ['id' => 'formChangePlace']) ?> 
+                            
                                 <div class="input-field" id="input-field-cad">
                                     <input type="password" name="password1" id="password1" placeholder="Senha">
                                     <div class="underline"></div>
@@ -197,7 +199,8 @@
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Descartar</button>
                             <button type="submit" class="btn btn-primary">Salvar</button>
-                            </form>
+                            
+                            <?= form_close() ?>
                         </div>
                     </div>
                 </div>

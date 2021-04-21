@@ -40,4 +40,32 @@ class AuthModel extends Model
         return $this->select('id')->where(['email' => $email])->get()->getRowArray();
         
     }
+
+    public function alterNameSP($data){
+
+        $sql = 'CALL alter_name_sp( :id: , :name:);';
+        $res = $this->db->query($sql, $data);
+
+        return;
+        
+    }
+
+    public function alterPlaceSP($data){
+
+        $sql = 'CALL alter_place_sp( :id: , :favorite_place:);';
+        $res = $this->db->query($sql, $data);
+
+        return;
+        
+    }
+
+    public function alterPasswordSP($data){
+
+        $sql = 'CALL alter_password_sp( :id: , :password:);';
+        $res = $this->db->query($sql, $data);
+
+        return;
+        
+    }
+
 }

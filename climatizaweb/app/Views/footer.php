@@ -1,5 +1,5 @@
 
-<footer class="py-4 bg-dark flex-shrink-0" style="position: absolute; width:100vw; bottom: 0;">
+<footer class="py-4 bg-dark flex-shrink-0" style="position: absolute; width:100vw; bottom: 0rem;">
     <div class="container text-center">
       <p class="text-muted">Copyright © Encurtador. Todos os direitos reservados.</p>
     </div>

@@ -44,19 +44,19 @@
           </div>
         </div>
         <div class="col-1">
-          <a href="<?= base_url('signin') ?>" class="lgnbtn" style="text-decoration: none;">
+          <a href="<?= base_url('userprofile') ?>" class="lgnbtn" style="text-decoration: none;">
             <i class="fa fa-user-circle"></i>
             <span class="txtbtn-lgn">
-              Login
+              Perfil
             </span>
           </a>
         </div>
 
         <div class="col-1.5">
-          <a href="<?= base_url('signup') ?>" class="lgnbtn" style="text-decoration: none;">
+          <a href="<?= base_url('logout') ?>" class="lgnbtn" style="text-decoration: none;">
             <i class="fa fa-user-circle"></i>
             <span class="txtbtn-lgn">
-              Cadastro
+              Sair
             </span>
           </a>
         </div>

@@ -9,6 +9,7 @@ use CodeIgniter\Controller;
 
 class AuthController extends BaseController
 {
+	
 	public function Register()
 	{
 
@@ -19,16 +20,17 @@ class AuthController extends BaseController
 
 			if ($validation->withRequest($this->request)->run(null, 'signup')) {
 				$result = (new AuthModel)->Register($request->getPost());
-				if ($result === null) {
+				if ($result == null) {
 					$result = [
 						'name' => $result->name,
 						'email' => $result->email,
-						'senha' => $result->senha,
+						'password' => $result->senha,
 
 
 					];
 				}
 				session()->setFlashdata('message', 'Registrado com Sucesso');
+				
 			} else {
 
 				$data =
@@ -39,7 +41,6 @@ class AuthController extends BaseController
 					];
 			}
 		}
-
 		return view('signup', $data);
 	}
 
@@ -64,7 +65,7 @@ class AuthController extends BaseController
 						]
 					);
 
-					return redirect('index');
+					return redirect()->to(base_url('userprofile'));
 				} else {
 					$data =
 						[
@@ -88,6 +89,12 @@ class AuthController extends BaseController
 
 
 		return view('signin', $data);
+	}
+
+	public function Logout(){
+
+		session()->destroy();
+		return redirect()->to(base_url('signin'));
 	}
 
 	public function Forgot()
@@ -156,9 +163,83 @@ class AuthController extends BaseController
             }
         }
 
-        return redirect('signin');
+        return redirect()->to(base_url('signin'));
 	}
 
+	public function User(){
+		if( $this->isLoggedIn() ){
+			$id = session()->get('id');
+			$column = "favorite_place";
+			$userModel = new \App\Models\AuthModel();
+			$UserInfo= $userModel->where('id' , $id)->find();
+			$UserName = $UserInfo[0]['name'];
+			$UserPlace = $UserInfo[0]['favorite_place'];
+			
+			$dados = [
+				'titulo' => 'Minha conta',
+				'UserPlace' => $UserPlace,
+				'UserName' => $UserName
+			];
+			return view('userprofile', $dados);
+			
+		}
+		else{
+			return redirect()->to(base_url('signin'));
+		}
+	}
 
+	public function AltName(){
+		if( $this->isLoggedIn() ){
+			$request = service('request');
+			$UserName = $request->getPost('name');
+			$id = session()->get('id');
+			$userModel = new \App\Models\AuthModel();
+			$data = [
+				'name' => $UserName,
+				'id' => $id
+			];
+			$res = $userModel->alterNameSP($data);
+			return redirect()->to(base_url('userprofile'));
+		}
+		else{
+			return redirect()->to(base_url('signin'));
+		}
+	}
+
+	public function AltPlace(){
+		if( $this->isLoggedIn() ){
+			$request = service('request');
+			$UserPlace = $request->getPost('local');
+			$id = session()->get('id');
+			$userModel = new \App\Models\AuthModel();
+			$data = [
+				'favorite_place' => $UserPlace,
+				'id' => $id
+			];
+			$res = $userModel->alterPlaceSP($data);
+			return redirect()->to(base_url('userprofile'));
+		}
+		else{
+			return redirect()->to(base_url('signin'));
+		}
+	}
+
+	public function AltPassword(){
+		if( $this->isLoggedIn() ){
+			$request = service('request');
+			$password = $request->getPost('password1');
+			$id = session()->get('id');
+			$userModel = new \App\Models\AuthModel();
+			$data = [
+				'password' => password_hash($password, PASSWORD_DEFAULT),
+				'id' => $id
+			];
+			$res = $userModel->alterPasswordSP($data);
+			return redirect()->to(base_url('logout'));
+		}
+		else{
+			return redirect()->to(base_url('signin'));
+		}
+	}
 
 }

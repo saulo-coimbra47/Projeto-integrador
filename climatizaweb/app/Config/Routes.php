@@ -22,7 +22,7 @@ $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
-$routes->setAutoRoute(true);
+$routes->setAutoRoute(false);
 
 /*
  * --------------------------------------------------------------------
@@ -35,10 +35,15 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->group('', function ($routes) {
 	$routes->add('signin', 'AuthController::Login');
+	$routes->add('logout', 'AuthController::Logout');
 	$routes->add('signup', 'AuthController::Register');
 	$routes->add('forgot', 'AuthController::Forgot');
 	$routes->add('newpassword/(:hash)', 'AuthController::Resetpage/$1');
 	$routes->add('savepassword', 'AuthController::SavePassword');
+	$routes->add('userprofile', 'AuthController::User');
+	$routes->add('altname', 'AuthController::AltName');
+	$routes->add('altplace', 'AuthController::AltPlace');
+	$routes->add('altpassword', 'AuthController::AltPassword');
 	
 
 
