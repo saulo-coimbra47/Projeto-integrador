@@ -56,7 +56,7 @@
             </div>
         </div>
     </div>
-    <div class="form">
+    <div class="form" style="text-align: center;">
             <br>
             <p class="message"><small>Esqueceu a Senha?</small> <a href="<?= base_url('forgot') ?>"> <small> Recupere a senha</small></a></p>
             <p class="message"><small>Não tem Cadastro? </small><a href="<?= base_url('signup') ?>"> <small> Crie uma conta </small></a></p>

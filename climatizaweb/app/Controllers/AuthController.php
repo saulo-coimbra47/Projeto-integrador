@@ -152,11 +152,17 @@ class AuthController extends BaseController
             $validation = \Config\Services::validation();
             if ($validation->withRequest($this->request)->run(null, 'resetPass')) {
                 $session = session();
-                $Libarie = new AuthLibraries();
+                $Librarie = new AuthLibraries();
+				
                 $id = $session->get('id');
+				$data = [
+					'id_user' => $id
+				];
 
-                if ($update = $Libarie->SavePassword($id, $request->getPost()) === true){
-					return session()->setFlashdata('messageReset', 'Senha alterada com Sucesso');
+                if ($update = $Librarie->SavePassword($id, $request->getPost()) == true){
+					$Model = (new AuthModel)->deletaTokenSP($data);
+					$msg = session()->setFlashdata('messageReset', 'Senha alterada com Sucesso');
+					return redirect()->to(base_url('signin', $msg));
 				}
 
                 $session->destroy();

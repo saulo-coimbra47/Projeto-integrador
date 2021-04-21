@@ -90,7 +90,17 @@ class AuthLibraries
             ->update();
        
         $db->close();
+        return true;
     }
 
+    public function deletaTokenSP($data){
+        
+        $db = db_connect();
+        $sql = 'CALL deleta_token_sp(:id:);';
+        $db->query($sql, $data);
 
-   }
+        $db->close();
+        
+    }
+
+}

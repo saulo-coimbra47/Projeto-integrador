@@ -68,4 +68,15 @@ class AuthModel extends Model
         
     }
 
+    public function deletaTokenSP($data){
+
+        $sql = 'CALL deleta_token_sp(:id_user:);';
+        $res = $this->db->query($sql, $data);
+
+        return;
+        
+    }
+
+
+
 }
