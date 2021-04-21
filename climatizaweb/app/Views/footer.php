@@ -1,7 +1,7 @@
 
-<footer class="py-4 bg-dark flex-shrink-0" style="position: absolute; width:100vw; bottom: 0rem;">
+<footer class="py-4 bg-dark flex-shrink-0" style="position: absolute; width:100%; bottom: 0%;">
     <div class="container text-center">
-      <p class="text-muted">Copyright © Encurtador. Todos os direitos reservados.</p>
+      <p class="text-muted">Copyright © Climatizaweb. Todos os direitos reservados.</p>
     </div>
 </footer>
 

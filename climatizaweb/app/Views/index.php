@@ -1,47 +1,115 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/1ab94d0eba.js" crossorigin="anonymous"></script>
-    <title></title>
-    <link type=text/css rel="stylesheet" href="../public/css/main.css">
-</head>
-<body>
-    <main class="container">
-        <h2>Login</h2>
-        <form action="">
-            <div class="input-field">
-                <input type="text" name="username" id="username"
-                    placeholder="E-mail">
-                <div class="underline"></div>
-            </div>
-            <div class="input-field">
-                <input type="password" name="password" id="password"
-                    placeholder="Senha">
-                <div class="underline"></div>
-            </div>
+<?php
+if (session()->get('logged_in') == TRUE) {
+    echo $this->include('UserHeader.php');
+}
+else{
+    echo $this->include('header.php');
+}
+?>
 
-            <input type="submit" value="Entrar">
-        </form>
 
-        <div class="footer">
-            <span>Conecte-se com uma rede social</span>
-            <div class="social-fields">
-                <div class="social-field google">
-                    <a href="#">
-                        <i class="fab fa-google-plus-g"></i>
-                        Conectar-se com Google+
-                    </a>
-                </div>
-                <div class="social-field facebook">
-                    <a href="#">
-                        <i class="fab fa-facebook-f"></i>
-                        Conectar-se com Facebook
-                    </a>
-                </div>
-            </div>
+<div class="container">
+    <div class="input-group mb-3 my-4">
+        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Pesquisar</button>
         </div>
-    </main>
-</body>
-</html>
+    </div>
+
+
+    <div class="resultado">
+        <div class="btn-group " role="group" aria-label="Basic example" style="width: 100%;">
+            <button type="button" class="btn btn-secondary">Agora</button>
+            <button type="button" class="btn btn-secondary">Hoje</button>
+            <button type="button" class="btn btn-secondary">Amanha</button>
+            <button type="button" class="btn btn-secondary">15 dias</button>
+        </div>
+
+
+        <div class="card-body text-center my-4">
+            <h2 class="card-title">Previsão de hoje pra {Cidade}</h2>
+
+            <br>
+            <div class="row justify-content-md-center">
+
+                <div class="col">
+                    <h5>Temperatura máxima: </h5>
+                </div>
+
+                <div class="col">
+                    <h5>30° </h5>
+                </div>
+
+            </div>
+
+            <div class="row justify-content-md-center">
+
+                <div class="col">
+                    <h5>Temperatura mínima: </h5>
+                </div>
+
+                <div class="col">
+                    <h5>15° </h5>
+                </div>
+
+            </div>
+
+            <div class="row justify-content-md-center">
+
+                <div class="col">
+                    <h5>Chuva: </h5>
+                </div>
+
+                <div class="col">
+                    <h5>10mm - 90% </h5>
+                </div>
+
+            </div>
+
+            <div class="row justify-content-md-center">
+
+                <div class="col">
+                    <h5>Vento: </h5>
+                </div>
+
+                <div class="col">
+                    <h5>WSW - 12km/h</h5>
+                </div>
+
+            </div>
+
+            <div class="row justify-content-md-center">
+
+                <div class="col">
+                    <h5>Umidade: </h5>
+                </div>
+
+                <div class="col">
+                    <h5>36% - 76%</h5>
+                </div>
+
+            </div>
+
+            <div class="row justify-content-md-center">
+
+                <div class="col">
+                    <h5>Sol: </h5>
+                </div>
+
+                <div class="col">
+                    <h5>06:19 - 17:55</h5>
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+</div>
+
+<?php echo $this->include('footer.php'); ?>
