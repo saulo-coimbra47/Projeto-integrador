@@ -184,7 +184,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <?= form_open(base_url('altpassword'), ['id' => 'formChangePlace']) ?> 
+                            <?= form_open(base_url('altpassword'), ['id' => 'formChangePassword']) ?> 
                             
                                 <div class="input-field" id="input-field-cad">
                                     <input type="password" name="password1" id="password1" placeholder="Senha">

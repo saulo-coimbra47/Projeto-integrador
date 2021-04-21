@@ -102,5 +102,6 @@ function erroConsulta(alerta) {
     $(alerta).fadeIn(200);
     setTimeout(function() {
         $(alerta).fadeOut(200);
+        p
     }, 5000)
 }

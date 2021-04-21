@@ -16,6 +16,13 @@
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css'>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css'>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <link type=text/css rel="stylesheet" href="<?= base_url('css/api.css'); ?>">
+    <script src="<?= base_url("js/scripts.js") ?>"></script>
+
     <title></title>
 </head>
 

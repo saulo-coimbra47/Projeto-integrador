@@ -24,7 +24,7 @@ body {
 
 /* Campo CEP */
 
-.form-cep {
+/* .form-cep {
     display: block;
     margin: 0 auto;
     text-align: center;
@@ -41,9 +41,9 @@ body {
     padding: 1rem;
     width: 50%;
     font-size: 1.2rem;
-}
+} */
 
-.btn-form-cep {
+/* .btn-form-cep {
     border-radius: 0 5px 5px 0;
     margin-left: -5px;
     padding: 1rem 0;
@@ -51,7 +51,7 @@ body {
     font-size: 1.2rem;
     background: #71a0c8;
     color: #fff;
-}
+} */
 
 
 /* localidade */

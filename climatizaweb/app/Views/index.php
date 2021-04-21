@@ -7,12 +7,14 @@ if (session()->get('logged_in') == TRUE) {
 ?>
 
 
+
 <div class="container">
+
     <form class="form-cep">
         <div class="input-group mb-3 my-4">
-            <input type="text" class="form-control input-cep" placeholder="CEP" name="input-cep" type="number" maxlength="8"" aria-describedby="button-addon2">
+            <input class="form-control input-cep" placeholder="CEP" name="input-cep" type="number" maxlength="8" aria-describedby="button-addon2">
             <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><span class="sr-only">Pesquisar</span><i class="fas fa-search"></i></button>
+                <button class="btn btn-outline-secondary btn-form-cep" type="submit" id="button-addon2"><span class="sr-only">Pesquisar</span><i class="fas fa-search"></i></button>
             </div>
         </div>
     </form>
@@ -107,10 +109,10 @@ if (session()->get('logged_in') == TRUE) {
         </div>
     </div>
 
-    
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-<script src='https://kit.fontawesome.com/4fb3cafa07.js'></script>
-<script src='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src='https://kit.fontawesome.com/4fb3cafa07.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'></script>
 
 </div>
 
