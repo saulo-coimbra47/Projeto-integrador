@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap');
+:root {
+    --background-cards: rgba(255, 255, 255, .2);
+    --border-cards: 2px solid #fff;
+    --border-radius-cards: 5px;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: "Lato", sans-serif;
+}
+
+body {
+    background-color: #d0d0d0;
+    background-attachment: fixed;
+}
+
+.previsao {
+    position: relative;
+    top: 2rem;
+}
+
+
+/* Campo CEP */
+
+.form-cep {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: 2rem;
+}
+
+.form-cep * {
+    border: none;
+}
+
+.input-cep {
+    border-radius: 5px 0 0 5px;
+    padding: 1rem;
+    width: 50%;
+    font-size: 1.2rem;
+}
+
+.btn-form-cep {
+    border-radius: 0 5px 5px 0;
+    margin-left: -5px;
+    padding: 1rem 0;
+    width: 3rem;
+    font-size: 1.2rem;
+    background: #71a0c8;
+    color: #fff;
+}
+
+
+/* localidade */
+
+.localidade {
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+/* Card Tempo (HOJE) */
+
+.card-tempo {
+    width: 80%;
+    max-width: 35rem;
+    margin: 0 auto;
+    background: var(--background-cards);
+    border: var(--border-cards);
+    border-radius: var(--border-radius-cards);
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.card-tempo-temperatura-temp {
+    font-size: 5rem;
+    font-weight: 900;
+    position: relative;
+}
+
+.card-tempo-caracteristicas {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.card-tempo-caracteristica span {
+    display: block;
+}
+
+.card-tempo-caracteristica-label {
+    font-size: 1.05rem;
+}
+
+.card-tempo-caracteristica-valor {
+    margin-top: .1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+/* Cards - temperatura semana  */
+
+.card-tempo-semana {
+    width: 95%;
+    max-width: 55rem;
+    margin: 0 auto 0 auto;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.card-tempo-semana-dia {
+    border-radius: var(--border-radius-cards);
+    padding: 2rem .5rem;
+    color: #fff;
+}
+
+.card-tempo-semana-dia-data {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.card-tempo-semana-temp-max,
+.card-tempo-semana-temp-min {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.card-tempo-semana-temp-max {
+    margin-top: 1rem;
+    color: #bc0000;
+}
+
+.card-tempo-semana-temp-min {
+    margin-bottom: .6rem;
+    color: #0057bc;
+}
+
+.card-tempo-semana-temp-min-val:before {
+    content: '\f063';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.card-tempo-semana-temp-max-val:before {
+    content: '\f062';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900
+}
+
+
+/* Informações */
+
+.informacoes-btn {
+    position: absolute;
+    bottom: .5rem;
+    right: .5rem;
+    font-size: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: rgb(196, 0, 4);
+    border: none;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.informacoes-btn i {
+    transition: .2s;
+}
+
+.informacoes-btn:hover {
+    cursor: pointer;
+}
+
+.informacoes-btn:hover i {
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, .8);
+}
+
+.informacoes-painel {
+    position: fixed;
+    background: #fff;
+    border-radius: 5px;
+    width: 95%;
+    max-width: 40rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, .5);
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+    display: none;
+    overflow-y: scroll;
+}
+
+.informacoes-painel-titulo {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.informacoes-painel-passos-projeto {
+    list-style-type: decimal;
+}
+
+.informacoes-painel-lista {
+    padding-left: 2rem;
+}
+
+.informacoes-painel-subtitulo {
+    font-weight: 900;
+    font-size: 1.2rem;
+    margin: 0.8rem 0 0.5rem 0;
+}
+
+.painel-lista-item {
+    margin: 0.4rem 0;
+}
+
+.informacoes-painel-descricao {
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .card-tempo-semana-resumo {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .input-cep {
+        width: 60%;
+    }
+    .informacoes-painel {
+        height: 95vh
+    }
+}
+
+@media (max-width: 576px) {
+    .card-tempo-bloco {
+        margin: 1rem 0;
+    }
+    .card-tempo-caracteristicas {
+        display: block;
+    }
+    .card-tempo-caracteristica {
+        margin-bottom: 1.2rem;
+    }
+    .card-tempo-caracteristica:last-of-type {
+        margin-bottom: 0;
+    }
+    .card-tempo-semana {
+        display: grid;
+        grid-template-columns: 100%;
+        justify-content: center;
+    }
+    .card-tempo-semana-dia {
+        width: 40%;
+        padding: .5rem 0;
+        margin: 0 auto .4rem auto;
+    }
+    .card-tempo-semana-dia:last-of-type {
+        margin: 0 auto 1rem auto;
+    }
+    .card-tempo-semana-dia-data {
+        font-size: 1.6rem;
+    }
+    .card-tempo-semana-temp-max {
+        margin-top: .4rem;
+    }
+    .card-tempo-semana-temp-min {
+        margin-bottom: 0;
+    }
+}
+
+
+/* --- */
+
+.localidade,
+.card-tempo {
+    display: none;
+}
+
+.semana-dia-1,
+.semana-dia-2,
+.semana-dia-3,
+.semana-dia-4,
+.semana-dia-5 {
+    display: none;
+    box-sizing: border-box;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: .01;
+    top: -9999px;
+    left: -9999px;
+}
+
+.slick-prev,
+.slick-next {
+    display: none !important;
+}
+
+.waiting {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+    display: none;
+}
+
+.waiting:after {
+    content: '\f254';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 5rem;
+    line-height: 1em;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    animation-name: girar-ampulheta;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+    transform-origin: 50%;
+    animation-iteration-count: infinite;
+}
+
+@keyframes girar-ampulheta {
+    0% {
+        transform: rotate(0);
+    }
+    90% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.alert {
+    position: fixed;
+    top: .6rem;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: .75rem 1.25rem;
+    ;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: .25rem;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    color: #721c24
+}
+
+.alert-erro-consulta,
+.alert-cep-nao-encontrado {
+    display: none;
+}

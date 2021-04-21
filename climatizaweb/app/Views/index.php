@@ -1,115 +1,117 @@
 <?php
 if (session()->get('logged_in') == TRUE) {
     echo $this->include('UserHeader.php');
-}
-else{
+} else {
     echo $this->include('header.php');
 }
 ?>
 
 
 <div class="container">
-    <div class="input-group mb-3 my-4">
-        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-        <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Pesquisar</button>
+    <form class="form-cep">
+        <div class="input-group mb-3 my-4">
+            <input type="text" class="form-control input-cep" placeholder="CEP" name="input-cep" type="number" maxlength="8"" aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><span class="sr-only">Pesquisar</span><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </form>
+
+    <div class="previsao">
+        <p class="localidade">
+            <span class="localidade-cidade"></span>
+            /
+            <span class="localidade-uf"></span>
+        </p>
+        <div class="card-tempo">
+            <p class="card-tempo-hoje"></p>
+            <div class="card-tempo-bloco">
+                <p class="card-tempo-temperatura"><span class="card-tempo-temperatura-temp"></span></p>
+                <p class="card-tempo-condicao"></p>
+            </div>
+            <div class="card-tempo-caracteristicas">
+                <p class="card-tempo-caracteristica card-tempo-caracteristicas-umidade">
+                    <span class="card-tempo-caracteristica-label">Umidade: </span>
+                    <span class="card-tempo-caracteristica-valor card-tempo-caracteristicas-umidade-valor"></span>
+                </p>
+                <p class="card-tempo-caracteristica card-tempo-caracteristicas-sensacao">
+                    <span class="card-tempo-caracteristica-label">Sensação: </span>
+                    <span class="card-tempo-caracteristica-valor card-tempo-caracteristicas-sensacao-valor"></span>
+                </p>
+                <p class="card-tempo-caracteristica card-tempo-caracteristicas-vento">
+                    <span class="card-tempo-caracteristica-label">Vento: </span>
+                    <span class="card-tempo-caracteristica-valor card-tempo-caracteristicas-vento-valor"></span>
+                </p>
+            </div>
+        </div>
+        <div class="card-tempo-semana">
+            <div class="card-tempo-semana-dia semana-dia-1">
+                <p class="card-tempo-semana-dia-data"></p>
+                <div class="card-tempo-semana-temp-max">
+                    <span class="sr-only">Máximo:</span>
+                    <span class="card-tempo-semana-temp-max-val"></span>º
+                </div>
+                <div class="card-tempo-semana-temp-min">
+                    <span class="sr-only">Mínimo:</span>
+                    <span class="card-tempo-semana-temp-min-val"></span>º
+                </div>
+            </div>
+
+            <div class="card-tempo-semana-dia semana-dia-2">
+                <p class="card-tempo-semana-dia-data"></p>
+                <div class="card-tempo-semana-temp-max">
+                    <span class="sr-only">Máximo:</span>
+                    <span class="card-tempo-semana-temp-max-val"></span>º
+                </div>
+                <div class="card-tempo-semana-temp-min">
+                    <span class="sr-only">Mínimo:</span>
+                    <span class="card-tempo-semana-temp-min-val"></span>º
+                </div>
+            </div>
+
+            <div class="card-tempo-semana-dia semana-dia-3">
+                <p class="card-tempo-semana-dia-data"></p>
+                <div class="card-tempo-semana-temp-max">
+                    <span class="sr-only">Máximo:</span>
+                    <span class="card-tempo-semana-temp-max-val"></span>º
+                </div>
+                <div class="card-tempo-semana-temp-min">
+                    <span class="sr-only">Mínimo:</span>
+                    <span class="card-tempo-semana-temp-min-val"></span>º
+                </div>
+            </div>
+
+            <div class="card-tempo-semana-dia semana-dia-4">
+                <p class="card-tempo-semana-dia-data"></p>
+                <div class="card-tempo-semana-temp-max">
+                    <span class="sr-only">Máximo:</span>
+                    <span class="card-tempo-semana-temp-max-val"></span>º
+                </div>
+                <div class="card-tempo-semana-temp-min">
+                    <span class="sr-only">Mínimo:</span>
+                    <span class="card-tempo-semana-temp-min-val"></span>º
+                </div>
+            </div>
+
+            <div class="card-tempo-semana-dia semana-dia-5">
+                <p class="card-tempo-semana-dia-data"></p>
+                <div class="card-tempo-semana-temp-max">
+                    <span class="sr-only">Máximo:</span>
+                    <span class="card-tempo-semana-temp-max-val"></span>º
+                </div>
+                <div class="card-tempo-semana-temp-min">
+                    <span class="sr-only">Mínimo:</span>
+                    <span class="card-tempo-semana-temp-min-val"></span>º
+                </div>
+            </div>
         </div>
     </div>
 
+    
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script src='https://kit.fontawesome.com/4fb3cafa07.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'></script>
 
-    <div class="resultado">
-        <div class="btn-group " role="group" aria-label="Basic example" style="width: 100%;">
-            <button type="button" class="btn btn-secondary">Agora</button>
-            <button type="button" class="btn btn-secondary">Hoje</button>
-            <button type="button" class="btn btn-secondary">Amanha</button>
-            <button type="button" class="btn btn-secondary">15 dias</button>
-        </div>
-
-
-        <div class="card-body text-center my-4">
-            <h2 class="card-title">Previsão de hoje pra {Cidade}</h2>
-
-            <br>
-            <div class="row justify-content-md-center">
-
-                <div class="col">
-                    <h5>Temperatura máxima: </h5>
-                </div>
-
-                <div class="col">
-                    <h5>30° </h5>
-                </div>
-
-            </div>
-
-            <div class="row justify-content-md-center">
-
-                <div class="col">
-                    <h5>Temperatura mínima: </h5>
-                </div>
-
-                <div class="col">
-                    <h5>15° </h5>
-                </div>
-
-            </div>
-
-            <div class="row justify-content-md-center">
-
-                <div class="col">
-                    <h5>Chuva: </h5>
-                </div>
-
-                <div class="col">
-                    <h5>10mm - 90% </h5>
-                </div>
-
-            </div>
-
-            <div class="row justify-content-md-center">
-
-                <div class="col">
-                    <h5>Vento: </h5>
-                </div>
-
-                <div class="col">
-                    <h5>WSW - 12km/h</h5>
-                </div>
-
-            </div>
-
-            <div class="row justify-content-md-center">
-
-                <div class="col">
-                    <h5>Umidade: </h5>
-                </div>
-
-                <div class="col">
-                    <h5>36% - 76%</h5>
-                </div>
-
-            </div>
-
-            <div class="row justify-content-md-center">
-
-                <div class="col">
-                    <h5>Sol: </h5>
-                </div>
-
-                <div class="col">
-                    <h5>06:19 - 17:55</h5>
-                </div>
-
-
-
-            </div>
-
-
-        </div>
-
-
-
-    </div>
 </div>
 
 <?php echo $this->include('footer.php'); ?>
